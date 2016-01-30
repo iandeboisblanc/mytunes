@@ -43,3 +43,20 @@ audio {
 /*  border: 3px solid orange;
   border-radius: 4px*/
 }
+
+.list_header input {
+  /*display: none;*/
+  padding: 0;
+  border: 0;
+  overflow:hidden;
+  height: 0px;
+  width: 120px;
+  font-size: 14px;
+  color: black;
+  float: below;
+  position: relative;
+  top: 30px;
+  right: 80px;
+  z-index: 1;
+  transition:height 0.05s ease-in;
+}

@@ -15,13 +15,18 @@ var SongQueueView = Backbone.View.extend({
     },
     'click .save_queue': function() {
       this.collection.saveList();
+      $('.list_header input').css('height', '25px');
+      $('.list_header input').css('padding', '1px');
+      $('.list_header input').css('border', '2px');
+
     }
   },
 
   render: function() {
     this.$el.html('<th class="list_header">Queue' +
       '<button class="clear">Clear</button>' +
-      '<button class="save_queue">Save As Playlist</button></th>').append(
+      '<button class="save_queue">Save As Playlist</button>' +
+      '<input></input></th>').append(
       this.collection.map(function(song) {
         return new SongQueueEntryView({model: song}).render();
       })
