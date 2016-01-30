@@ -14,6 +14,10 @@ var SongQueue = Songs.extend({
       firstSong.play();
       //App should take care fo the rest
     }
+  },
+
+  saveList: function() {
+    this.trigger('saveList', this);
   }
 
 });
