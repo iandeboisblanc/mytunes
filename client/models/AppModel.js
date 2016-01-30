@@ -22,8 +22,7 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     this.get('songQueue').on('saveList', function(songQueue) {
-      console.log(songQueue);
-      var playlist = new PlaylistModel({title:'WOOOHOOO', songs:songQueue.models});
+      var playlist = new PlaylistModel({title:songQueue.passName, songs:songQueue.models});
       this.get('playlistLibrary').add(playlist);
     }, this);
 

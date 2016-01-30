@@ -16,7 +16,8 @@ var SongQueue = Songs.extend({
     }
   },
 
-  saveList: function() {
+  saveList: function(listName) {
+    this.passName = listName;
     this.trigger('saveList', this);
   }
 

@@ -14,11 +14,20 @@ var SongQueueView = Backbone.View.extend({
       this.collection.reset();    
     },
     'click .save_queue': function() {
-      this.collection.saveList();
       $('.list_header input').css('height', '25px');
       $('.list_header input').css('padding', '1px');
       $('.list_header input').css('border', '2px');
 
+    },
+    'keypress input': function(e) {
+      if(e && e.keyCode === 13) {
+        var input = e.target.value;
+        e.target.value = '';
+        $('.list_header input').css('border', '0px');
+        $('.list_header input').css('padding', '0px');
+        $('.list_header input').css('height', '0px');
+        this.collection.saveList(input);
+      }
     }
   },
 
