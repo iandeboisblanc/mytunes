@@ -5,9 +5,12 @@ var AppModel = Backbone.Model.extend({
     this.set('currentSong', new SongModel());
     this.set('songQueue', new SongQueue());
 
-    var lib = this.get('library');
-    console.log(lib);
-    params.library.on('enqueue', function(){console.log('appmodel');});
+    params.library.on('enqueue', function(song){
+      this.get('songQueue').add(song); 
+      if(this.get('currentSong').get('url') === undefined) {
+        this.get('songQueue').playFirst();
+      } 
+    }, this);
 
     /* Note that 'this' is passed as the third argument. That third argument is
     the context. The 'play' handler will always be bound to that context we pass in.

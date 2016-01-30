@@ -5,9 +5,15 @@ var SongQueue = Songs.extend({
     // this.on('enqueue', this.addToQueue);
   },
 
-  addToQueue: function(e) {
-    console.log(e);
-    //this.add(e)
+  playFirst: function() {
+    //get song at top of queue
+    if(this.length > 0 ){
+      var firstSong = this.shift();
+
+      //trigger play with this song
+      firstSong.play();
+      //App should take care fo the rest
+    }
   }
 
 });

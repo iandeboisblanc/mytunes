@@ -1,4 +1,4 @@
-xdescribe('SongQueue', function() {
+describe('SongQueue', function() {
   var playSpy, songData1, songData2;
 
   beforeEach(function() {
@@ -19,7 +19,7 @@ xdescribe('SongQueue', function() {
     SongQueue.prototype.playFirst.restore();
   });
 
-  xdescribe('when a song is added', function() {
+  describe('when a song is added', function() {
     describe('when it is the only song in the song queue', function() {
       it('plays it', function() {
         var songQueue = new SongQueue();
@@ -28,7 +28,7 @@ xdescribe('SongQueue', function() {
       });
     });
 
-    xdescribe('when it is not the only song in the song queue', function() {
+    describe('when it is not the only song in the song queue', function() {
       it('does nothing', function() {
         var songQueue = new SongQueue(songData1);
         songQueue.add(songData2);
@@ -37,7 +37,7 @@ xdescribe('SongQueue', function() {
     });
   });
 
-  xdescribe('when a song ends', function() {
+  describe('when a song ends', function() {
     it('removes the song from the queue', function() {
       var songQueue = new SongQueue([songData1, songData2]);
       song2 = songQueue.at(1);
@@ -47,7 +47,7 @@ xdescribe('SongQueue', function() {
       expect(songQueue.at(0)).to.equal(song2);
     });
 
-    xdescribe('if there are any songs left in the queue', function() {
+    describe('if there are any songs left in the queue', function() {
       it('plays the first song in the queue', function() {
         var songQueue = new SongQueue([songData1, songData2]);
         songQueue.at(0).ended();
@@ -55,7 +55,7 @@ xdescribe('SongQueue', function() {
       });
     });
 
-    xdescribe('if there are no songs left in the queue', function() {
+    describe('if there are no songs left in the queue', function() {
       it('does nothing', function() {
         var songQueue = new SongQueue(songData1);
         songQueue.at(0).ended();
@@ -64,7 +64,7 @@ xdescribe('SongQueue', function() {
     });
   });
 
-  xdescribe('when a song is dequeued', function() {
+  describe('when a song is dequeued', function() {
     it('removes the song', function() {
       removeSpy = sinon.spy(SongQueue.prototype, 'remove');
       var songQueue = new SongQueue(songData1);
@@ -74,7 +74,7 @@ xdescribe('SongQueue', function() {
     });
   });
 
-  xdescribe('playFirst', function() {
+  describe('playFirst', function() {
     it('plays the first song in the queue', function() {
       sinon.spy(SongModel.prototype, 'play');
       var songQueue = new SongQueue(songData1);
