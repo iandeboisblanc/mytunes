@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Poiret One';
+  font-size: 20px;
+}
+
+.now_playing {
+  font-size: 40px;
+  margin: 8px 0px 8px;
+
+}
+
+.current_song {
+  font-size: 25px;
+  height: 25px;
+  margin: 5px 0px 10px;
+}
+
+.list_header {
+  font-size: 30px;
+  height: 60px;
+  vertical-align: bottom;
+}
+
+.lib_header {
+  border-bottom: 1px solid white;
+}

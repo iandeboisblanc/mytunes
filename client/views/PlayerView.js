@@ -5,7 +5,7 @@ var PlayerView = Backbone.View.extend({
   // see: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 
   // nowPlaying: `<div><h5>Now Playing:</h5></div><div>${this.model.get('title')} by ${this.model.get('artist')}</div>`,
-  el: '<div><h3>Now Playing:</h3><div class="now_playing"></div><audio controls autoplay /></div>',
+  el: '<div><h3 class="now_playing">Now Playing:</h3><div class="current_song"></div><audio controls autoplay /></div>',
 
   setSong: function(song) {
     this.model = song;
@@ -15,7 +15,7 @@ var PlayerView = Backbone.View.extend({
 
   render: function(setSong) {
     if(setSong) {
-      this.$el.find('.now_playing').text(`${this.model.get('title')} by ${this.model.get('artist')}`);
+      this.$el.find('.current_song').text(`${this.model.get('title')} by ${this.model.get('artist')}`);
     }
     this.$el.find('audio').attr('src', this.model ? this.model.get('url') : '');
     return this.$el;
