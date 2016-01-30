@@ -13,7 +13,11 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     params.library.on('ended', function(song) {
-      this.get('songQueue').playFirst();
+      if(this.get('songQueue').length>0) {
+        this.get('songQueue').playFirst();
+      } else {
+        this.set('currentSong', new SongModel());
+      }
     }, this);
 
     /* Note that 'this' is passed as the third argument. That third argument is

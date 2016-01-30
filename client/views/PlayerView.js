@@ -14,7 +14,7 @@ var PlayerView = Backbone.View.extend({
   },
 
   render: function(setSong) {
-    if(setSong) {
+    if(setSong && this.model.get('title')) {
       this.$el.find('.current_song').text(`${this.model.get('title')} by ${this.model.get('artist')}`);
     }
     this.$el.find('audio').attr('src', this.model ? this.model.get('url') : '');

@@ -2,27 +2,37 @@ body {
   background-color: black;
   color: white;
   font-family: 'Poiret One';
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .now_playing {
-  font-size: 40px;
+  font-size: 34px;
   margin: 8px 0px 8px;
 
 }
 
 .current_song {
-  font-size: 25px;
-  height: 25px;
+  font-size: 19px;
+  height: 19px;
   margin: 5px 0px 10px;
 }
 
 .list_header {
-  font-size: 30px;
+  font-size: 24px;
   height: 60px;
   vertical-align: bottom;
 }
 
 .lib_header {
   border-bottom: 1px solid white;
+}
+
+td {
+  padding-right: 5px;
+}
+
+.list_header button {
+  font-size: 10px;
+  color: orange;
+  margin-left: 5px;
 }
