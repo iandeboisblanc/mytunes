@@ -1,3 +1,5 @@
+var Songs = require('./Songs.js');
+
 // SongQueue.js - Defines a backbone model class for the song queue.
 var SongQueue = Songs.extend({
 
@@ -22,3 +24,5 @@ var SongQueue = Songs.extend({
   }
 
 });
+
+module.exports =  SongQueue;

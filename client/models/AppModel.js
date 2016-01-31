@@ -1,3 +1,9 @@
+var SongModel = require('./SongModel.js');
+var PlaylistModel = require('./PlaylistModel.js');
+var SongQueue = require('../collections/SongQueue.js');
+var PlaylistLibrary = require('../collections/PlaylistLibrary.js');
+
+
 // App.js - Defines a backbone model class for the whole app.
 var AppModel = Backbone.Model.extend({
 
@@ -46,3 +52,5 @@ var AppModel = Backbone.Model.extend({
   }
 
 });
+
+module.exports = AppModel;

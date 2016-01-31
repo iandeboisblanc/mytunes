@@ -1,7 +1,12 @@
+var PlayerView = require('./PlayerView.js');
+var SongQueueView = require('./SongQueueView.js');
+var PlaylistLibraryView = require('./PlaylistLibraryView.js');
+var LibraryView = require('./LibraryView.js');
+
 // AppView.js - Defines a backbone view class for the whole music app.
 var AppView = Backbone.View.extend({
 
-  el: '<div class="row"><div class="col-md-6 left"></div><div class="col-md-6 right"></div></div>',
+  el: '<div class="row"><div class="col-sm-6 left"></div><div class="col-sm-6 right"></div></div>',
   initialize: function(params) {
     this.playerView = new PlayerView({model: this.model.get('currentSong')});
     this.libraryView = new LibraryView({collection: this.model.get('library')});
@@ -25,3 +30,5 @@ var AppView = Backbone.View.extend({
   }
 
 });
+
+module.exports = AppView;

@@ -6,9 +6,9 @@ var PlaylistModel = Backbone.Model.extend({
   },
 
   loadPlaylist: function() {
-    console.log('loadPlaylist');
     this.trigger('loadPlaylist', this);
   }
 
 });
 
+module.exports = PlaylistModel;

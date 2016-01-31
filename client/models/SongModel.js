@@ -23,3 +23,5 @@ var SongModel = Backbone.Model.extend({
   }
 
 });
+
+module.exports = SongModel;

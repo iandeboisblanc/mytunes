@@ -21,3 +21,5 @@ var songData = [
     artist: "Aaliyah",
   }
 ];
+
+module.exports = songData;

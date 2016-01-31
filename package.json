@@ -1,0 +1,33 @@
+{
+  "name": "2016-01-mytunes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "webpack": "^2.0.6-beta",
+    "backbone": "^1.2.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iandeboisblanc/2016-01-mytunes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iandeboisblanc/2016-01-mytunes/issues"
+  },
+  "homepage": "https://github.com/iandeboisblanc/2016-01-mytunes",
+  "scripts": {
+    "build":"webpack"
+  }
+
+}

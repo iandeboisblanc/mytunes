@@ -13,3 +13,5 @@ var PlaylistLibraryEntryView = Backbone.View.extend({
 
 
 });
+
+module.exports = PlaylistLibraryEntryView;

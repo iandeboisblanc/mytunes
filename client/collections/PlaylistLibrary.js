@@ -1,3 +1,5 @@
+var PlaylistModel = require('../models/PlaylistModel');
+
 var PlaylistLibrary = Backbone.Collection.extend({
   model: PlaylistModel,
 
@@ -6,3 +8,5 @@ var PlaylistLibrary = Backbone.Collection.extend({
   }
 
 });
+
+module.exports = PlaylistLibrary;

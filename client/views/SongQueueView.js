@@ -1,3 +1,5 @@
+var SongQueueEntryView = require('./SongQueueEntryView.js');
+var $ = require('jquery');
 // SongQueueView.js - Defines a backbone view class for the song queue.
 var SongQueueView = Backbone.View.extend({
 
@@ -43,3 +45,5 @@ var SongQueueView = Backbone.View.extend({
   }
 
 });
+
+module.exports = SongQueueView;

@@ -1,3 +1,4 @@
+var PlaylistLibraryEntryView = require('./PlaylistLibraryEntryView.js');
 // LibraryView.js - Defines a backbone view class for the music library.
 var PlaylistLibraryView = Backbone.View.extend({
 
@@ -21,3 +22,5 @@ var PlaylistLibraryView = Backbone.View.extend({
   }
 
 });
+
+module.exports = PlaylistLibraryView;

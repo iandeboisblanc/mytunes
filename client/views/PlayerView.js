@@ -22,3 +22,5 @@ var PlayerView = Backbone.View.extend({
   }
 
 });
+
+module.exports = PlayerView;
