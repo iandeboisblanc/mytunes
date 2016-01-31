@@ -60,3 +60,11 @@ audio {
   z-index: 1;
   transition:height 0.05s ease-in;
 }
+
+#queue_header, #playlists_header {
+  border-bottom: 1px solid orange;
+}
+
+button {
+  /*background-color: grey;*/
+}

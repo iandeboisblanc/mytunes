@@ -34,7 +34,7 @@ var SongQueueView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html('<th class="list_header">Queue' +
+    this.$el.html('<th class="list_header" id="queue_header" colspan=2>Queue' +
       '<button class="clear">Clear</button>' +
       '<button class="save_queue">Save As Playlist</button>' +
       '<input></input></th>').append(

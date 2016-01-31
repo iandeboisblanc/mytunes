@@ -13662,7 +13662,7 @@
 	    // to preserve event handlers on child nodes, we must call .detach() on them before overwriting with .html()
 	    // see http://api.jquery.com/detach/
 	    // this.$el.children().detach();
-	    this.$el.html('<th class="list_header">Library</th>').append(
+	    this.$el.html('<th class="list_header" colspan=3>Library</th>').append(
 	        '<tr><td class="lib_header">Artist</td><td class="lib_header">Title</td><td class="lib_header">Play Count</td></tr>').append(
 	        this.collection.map(function(song) {
 	          return new LibraryEntryView({model: song}).render();
@@ -13747,7 +13747,7 @@
 	    // see http://api.jquery.com/detach/
 	    // this.$el.children().detach();
 
-	    this.$el.html('<th class="list_header">Playlists</th>').append(
+	    this.$el.html('<th class="list_header" id="playlists_header">Playlists</th>').append(
 	        this.collection.map(function(playlist) {
 	          return new PlaylistLibraryEntryView({model: playlist}).render();
 	        })
@@ -13817,7 +13817,7 @@
 	  },
 
 	  render: function() {
-	    this.$el.html('<th class="list_header">Queue' +
+	    this.$el.html('<th class="list_header" id="queue_header" colspan=2>Queue' +
 	      '<button class="clear">Clear</button>' +
 	      '<button class="save_queue">Save As Playlist</button>' +
 	      '<input></input></th>').append(

@@ -14,7 +14,7 @@ var PlaylistLibraryView = Backbone.View.extend({
     // see http://api.jquery.com/detach/
     // this.$el.children().detach();
 
-    this.$el.html('<th class="list_header">Playlists</th>').append(
+    this.$el.html('<th class="list_header" id="playlists_header">Playlists</th>').append(
         this.collection.map(function(playlist) {
           return new PlaylistLibraryEntryView({model: playlist}).render();
         })
